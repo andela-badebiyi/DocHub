@@ -1,0 +1,28 @@
+<div ng-controller='authController' layout='row' flex layout-align='center center'>
+  <div style="width:400px; padding: 2em 2em 2em 2em" md-whiteframe='3'>
+      <div layout='row' flex layout-align='center center'>
+        <span class='md-display-1'>User Login</span>
+      </div>
+      <form name = 'myForm' ng-submit='model.submit(myForm.$valid)'>
+      <div flex>
+        <md-input-container style="width: 100%;">
+          <label>Username/Email</label>
+          <md-icon><i class='fa fa-user'></i></md-icon>
+          <input name="username" ng-model="model.username" required minlength="4">
+        </md-input-container>
+      </div>
+      <div flex>
+        <md-input-container style="width: 100%;">
+          <label>Password</label>
+          <md-icon><i class='fa fa-key'></i></md-icon>
+          <input type='password' name="password" ng-model="model.password" required minlength="6">
+        </md-input-container>
+      </div>
+      <div flex>
+        <md-button class="md-raised" type="submit"> Login </md-button>
+      </div>
+      </form>
+      <flash-message duration="5000" show-close="true" on-dismiss="myCallback(flash);"></flash-message>
+    </div>
+  </div>
+</div>
